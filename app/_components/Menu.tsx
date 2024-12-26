@@ -28,7 +28,7 @@ const Menu = () => {
   return (
     <div className='flex flex-col h-screen bg-gradient-to-b from-[rgba(33,144,195,0.1)] to-[rgba(33,144,195,0)] p-4'>
       {/* Logo Section */}
-      <div>
+      <Link href={"/"}>
         <Image
           src={"/assets/logo.png"}
           alt='logo'
@@ -36,7 +36,7 @@ const Menu = () => {
           height={100}
           className='max-sm:hidden block'
         />
-      </div>
+      </Link>
 
       {/* Navigation Items */}
       <div className='flex flex-col gap-4'>

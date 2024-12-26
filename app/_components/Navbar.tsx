@@ -34,9 +34,9 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center py-4 px-6 md:px-10'>
-      <div>
+      <Link href={"/"}>
         <Image src={"/assets/logo.png"} alt='logo' width={100} height={100} />
-      </div>
+      </Link>
 
       {/* Mobile Menu Icon */}
       <div className='md:hidden'>

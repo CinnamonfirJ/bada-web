@@ -3,13 +3,7 @@ import { cva } from "class-variance-authority";
 import Link from "next/link";
 
 interface ButtonProps {
-  variant?:
-    | "default"
-    | "primary"
-    | "light"
-    | "dark"
-    | "dashboard"
-    | "dashboardGray";
+  variant?: "default" | "primary" | "light" | "dark";
   children: React.ReactNode; // Explicitly define the type for children
   icon?: React.ReactNode; // For an optional icon
   to?: string; // Define the type for `to`
@@ -27,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({
       "justify-center",
       "items-center",
       "gap-3",
+      "text-sm",
       "rounded-full",
       "cursor-pointer",
     ],
@@ -37,19 +32,20 @@ const Button: React.FC<ButtonProps> = ({
           primary: [
             "bg-primary",
             "text-white",
+            "border",
+            "border-primary",
+            "hover:border-secondary",
             "hover:bg-secondary",
             "hover:text-black",
-            "px-6",
+            "px-4",
             "py-2",
           ],
           light: [
-            "bg-white",
-            "text-black",
+            "bg-transparent",
+            "hover:bg-secondary",
             "border",
-            "border-black",
-            "hover:bg-black",
-            "hover:text-white",
-            "px-6",
+            "border-foreground",
+            "px-4",
             "py-2",
           ],
           dark: [
@@ -61,26 +57,6 @@ const Button: React.FC<ButtonProps> = ({
             "hover:text-black",
             "px-6",
             "py-2",
-          ],
-          dashboard: [
-            "bg-white",
-            "rounded-md",
-            "border-[0.3px]",
-            "border-black/30",
-            "w-[160px]",
-            "py-1",
-            "text-sm",
-            "font-light",
-          ],
-          dashboardGray: [
-            "bg-[#B6BFC3]",
-            "rounded-md",
-            "border-[0.3px]",
-            "border-[#B6BFC3]",
-            "w-[160px]",
-            "py-1",
-            "text-sm",
-            "font-light",
           ],
         },
       },
@@ -96,7 +72,7 @@ const Button: React.FC<ButtonProps> = ({
     <Link href={to}>
       <div className={`${variantClass}`}>
         {icon && <div>{icon}</div>}
-        <span>{children}</span>
+        <span className='flex items-center gap-3 text-nowrap'>{children}</span>
       </div>
     </Link>
   );

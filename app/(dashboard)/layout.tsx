@@ -17,7 +17,7 @@ export default function DashboardLayout({
           <Menu />
         </div>
         {/* RIGHT */}
-        <div className='w-[86%] bg-blue-100'>
+        <div className='w-[86%]'>
           {/* <Navbar /> */}
           {children}
           {/* <TopToolbar />

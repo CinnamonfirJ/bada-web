@@ -43,9 +43,13 @@ const Menu = () => {
             }`}
           >
             <link.icon
-              size={20}
+              size={20} // Adjust size
+              color='black' // Set color
+              strokeWidth={2.5} // Adjust stroke width
               className={`${
-                pathname === link.path ? "text-white" : "text-[#B3E5FC]"
+                pathname === link.path
+                  ? "text-white custom-icon"
+                  : "text-[#B3E5FC]"
               }`}
             />
             <span>{link.name}</span>

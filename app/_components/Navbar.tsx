@@ -62,8 +62,8 @@ const Navbar = () => {
 
       {/* Buttons */}
       <div className='hidden md:flex justify-center items-center gap-4'>
-        <Button to='/admin'>Login</Button>
-        <Button to='/admin' variant={"primary"}>
+        <Button to='/home'>Login</Button>
+        <Button to='/home' variant={"primary"}>
           See a Demo
         </Button>
       </div>

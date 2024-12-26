@@ -69,3 +69,9 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-icon {
+  fill: none; /* Ensure no fill color */
+  stroke: black; /* Set stroke color */
+  stroke-width: 3; /* Adjust stroke width for boldness */
+}

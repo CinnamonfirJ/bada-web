@@ -53,7 +53,7 @@ const MarketplacePage = () => {
   ];
 
   return (
-    <div className='flex justify-between w-full max-[900px]:flex-col max-[900px]:flex-col-reverse'>
+    <div className='flex justify-between w-full max-[900px]:flex-col'>
       <main className='w-full'>
         <div className='flex w-full justify-center mx-auto px-4'>
           <div className='py-4'>

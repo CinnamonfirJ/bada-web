@@ -1,3 +1,4 @@
+import BottomMenu from "../_components/BottomMenu";
 import Menu from "../_components/Menu";
 
 export default function DashboardLayout({
@@ -13,15 +14,14 @@ export default function DashboardLayout({
       </div> */}
       <div className='flex h-full'>
         {/* LEFT */}
-        <div className='lg:w-[14%] bg-sidebar-bg border-r border-black/50'>
+        <div className='lg:w-[14%] bg-sidebar-bg border-r border-black/50 left-80'>
           <Menu />
         </div>
         {/* RIGHT */}
-        <div className='w-[96%]'>
-          {/* <Navbar /> */}
-          {children}
-          {/* <TopToolbar />
-          <SalesHub /> */}
+        <div className='w-[96%]'>{children}</div>
+        {/* BOTTOM */}
+        <div className=''>
+          <BottomMenu />
         </div>
       </div>
     </div>

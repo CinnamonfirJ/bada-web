@@ -5,7 +5,7 @@ import Aside from "@/app/_components/Aside";
 
 const HomePage = () => {
   return (
-    <div className='flex justify-between max-[900px]:flex-col max-[900px]:flex-col-reverse'>
+    <div className='flex justify-between max-[900px]:flex-col'>
       <main className=''>
         <div className='w-full mx-auto px-4'>
           <div className='py-4'>

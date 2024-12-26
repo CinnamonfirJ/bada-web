@@ -50,15 +50,13 @@ const HomePage = () => {
         </div>
       </main>
 
-      <aside className='w-full flex flex-col justify-center items-center p-4'>
-        <div className='flex w-full items-center justify-between mb-8'>
+      <aside className='w-full max-w-sm p-4'>
+        <div className='flex items-center justify-between mb-8'>
           <ThemeToggle />
           <WalletStatus />
         </div>
-        <div className='w-full max-w-md p-4'>
-          <TrendingAssets />
-          <SuggestedFollows />
-        </div>
+        <TrendingAssets />
+        <SuggestedFollows />
       </aside>
     </div>
   );

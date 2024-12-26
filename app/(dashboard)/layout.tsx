@@ -1,13 +1,11 @@
 import Menu from "../_components/Menu";
-import Header from "../_components/Header";
 import Navbar from "../_components/Navbar";
-import SalesHub from "./saleshub/SalesHub";
-import TopToolbar from "../_components/ToolBar";
 
-export default function DashboardLayout({}: // children,
-Readonly<{
+export default function DashboardLayout({
+  children,
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <div className='flex flex-col h-full'>
       {/* TOP */}
@@ -22,8 +20,9 @@ Readonly<{
         {/* RIGHT */}
         <div className='w-[86%] bg-blue-100'>
           <Navbar />
-          <TopToolbar />
-          <SalesHub />
+          {children}
+          {/* <TopToolbar />
+          <SalesHub /> */}
         </div>
       </div>
     </div>

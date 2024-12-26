@@ -1,7 +1,26 @@
+import React from "react";
 import { cva } from "class-variance-authority";
 import Link from "next/link";
 
-const Button = ({ variant = "default", children, icon, to = "#" }) => {
+interface ButtonProps {
+  variant?:
+    | "default"
+    | "primary"
+    | "light"
+    | "dark"
+    | "dashboard"
+    | "dashboardGray";
+  children: React.ReactNode; // Explicitly define the type for children
+  icon?: React.ReactNode; // For an optional icon
+  to?: string; // Define the type for `to`
+}
+
+const Button: React.FC<ButtonProps> = ({
+  variant = "default",
+  children,
+  icon,
+  to = "#",
+}) => {
   const ButtonStyle = cva(
     [
       "flex",

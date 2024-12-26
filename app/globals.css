@@ -75,3 +75,21 @@ body {
   stroke: black; /* Set stroke color */
   stroke-width: 3; /* Adjust stroke width for boldness */
 }
+
+.nft-id {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18.29px;
+}
+
+.nft-tag {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 12.19px;
+}
+
+.nft-desc {
+  font-size: 8px;
+  font-weight: 300;
+  line-height: 9.75px;
+}

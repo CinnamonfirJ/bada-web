@@ -70,7 +70,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className='absolute top-full left-0 w-full bg-white shadow-md md:hidden'>
+        <div className='absolute top-14 left-0 w-full bg-white shadow-md md:hidden'>
           <ul className='flex flex-col gap-4 py-4 px-6 capitalize'>
             {links.map((link, i) => (
               <li

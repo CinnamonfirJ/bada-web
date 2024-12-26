@@ -85,7 +85,7 @@ const Hero = () => {
             <input
               type='email'
               placeholder='Enter your email'
-              className='flex-grow px-4 py-3 text-gray-800 placeholder-gray-500 focus:outline-none'
+              className='flex-grow px-4 py-3 max-md:w-[60%] text-gray-800 placeholder-gray-500 focus:outline-none'
             />
             <button className='px-6 py-3 bg-[#1A6E8F] text-white font-semibold hover:bg-[#155d73]'>
               Join the Waitlist

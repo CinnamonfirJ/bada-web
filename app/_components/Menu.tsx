@@ -26,10 +26,16 @@ const Menu = () => {
   const pathname = usePathname(); // Get the current route
 
   return (
-    <div className='flex flex-col h-screen w-64 bg-gradient-to-b from-[rgba(33,144,195,0.1)] to-[rgba(33,144,195,0)] p-4'>
+    <div className='flex flex-col h-screen bg-gradient-to-b from-[rgba(33,144,195,0.1)] to-[rgba(33,144,195,0)] p-4'>
       {/* Logo Section */}
       <div>
-        <Image src={"/assets/logo.png"} alt='logo' width={100} height={100} />
+        <Image
+          src={"/assets/logo.png"}
+          alt='logo'
+          width={100}
+          height={100}
+          className='max-sm:hidden block'
+        />
       </div>
 
       {/* Navigation Items */}
@@ -52,7 +58,7 @@ const Menu = () => {
                   : "text-[#B3E5FC]"
               }`}
             />
-            <span>{link.name}</span>
+            <span className='max-sm:hidden block'>{link.name}</span>
           </Link>
         ))}
       </div>
@@ -60,8 +66,8 @@ const Menu = () => {
       {/* Create Post Button */}
       <div className='mt-auto'>
         <button className='flex items-center justify-center w-full py-3 bg-[#1A6E8F] text-white rounded-lg hover:bg-[#184E6B] transition'>
-          <PlusCircle size={20} className='text-white mr-2' />
-          Create post
+          <PlusCircle size={20} className='text-white mr-2 max-sm:mr-0' />
+          <span className='max-sm:hidden block'>Create post</span>
         </button>
       </div>
 
@@ -74,7 +80,7 @@ const Menu = () => {
           height={20}
           className=' rounded-full mr-2'
         />
-        <div>
+        <div className='max-sm:hidden block'>
           <p className='text-sm font-medium'>DESMOND.sui</p>
           <p className='text-xs text-gray-300'>...</p>
         </div>

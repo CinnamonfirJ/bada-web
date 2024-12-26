@@ -13,7 +13,7 @@ export default function DashboardLayout({
       </div> */}
       <div className='flex h-full'>
         {/* LEFT */}
-        <div className='lg:w-[24%] md:w-[10%] bg-sidebar-bg border-r border-black/50'>
+        <div className='lg:w-[24%]  bg-sidebar-bg border-r border-black/50'>
           <Menu />
         </div>
         {/* RIGHT */}

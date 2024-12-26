@@ -1,5 +1,4 @@
 import Menu from "../_components/Menu";
-import Navbar from "../_components/Navbar";
 
 export default function DashboardLayout({
   children,
@@ -19,7 +18,7 @@ export default function DashboardLayout({
         </div>
         {/* RIGHT */}
         <div className='w-[86%] bg-blue-100'>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
           {/* <TopToolbar />
           <SalesHub /> */}

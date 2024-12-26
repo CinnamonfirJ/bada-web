@@ -26,10 +26,10 @@ const Menu = () => {
   const pathname = usePathname(); // Get the current route
 
   return (
-    <div className='flex flex-col h-screen w-64 bg-[#2190C3] text-white p-4'>
+    <div className='flex flex-col h-screen w-64 bg-gradient-to-b from-[rgba(33,144,195,0.1)] to-[rgba(33,144,195,0)] p-4'>
       {/* Logo Section */}
-      <div className='mb-6'>
-        <h1 className='text-2xl font-bold'>BADA</h1>
+      <div>
+        <Image src={"/assets/logo.png"} alt='logo' width={100} height={100} />
       </div>
 
       {/* Navigation Items */}

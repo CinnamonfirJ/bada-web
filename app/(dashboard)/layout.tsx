@@ -13,11 +13,11 @@ export default function DashboardLayout({
       </div> */}
       <div className='flex h-full'>
         {/* LEFT */}
-        <div className='lg:w-[24%]  bg-sidebar-bg border-r border-black/50'>
+        <div className='lg:w-[14%] bg-sidebar-bg border-r border-black/50'>
           <Menu />
         </div>
         {/* RIGHT */}
-        <div className='w-[86%]'>
+        <div className='w-[96%]'>
           {/* <Navbar /> */}
           {children}
           {/* <TopToolbar />

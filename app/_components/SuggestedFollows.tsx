@@ -11,12 +11,12 @@ export function SuggestedFollows() {
     {
       name: "Swill_eke",
       role: "Sui Ambassador",
-      avatar: "/placeholder.svg?height=48&width=48",
+      avatar: "/assets/img1.png?height=48&width=48",
     },
     {
       name: "sugarcho.sui",
       role: "Sui Ambassador",
-      avatar: "/placeholder.svg?height=48&width=48",
+      avatar: "/assets/img2.png?height=48&width=48",
     },
   ];
 

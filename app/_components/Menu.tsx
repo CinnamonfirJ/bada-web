@@ -26,7 +26,7 @@ const Menu = () => {
   const pathname = usePathname(); // Get the current route
 
   return (
-    <div className='flex flex-col h-screen bg-gradient-to-b from-[rgba(33,144,195,0.1)] to-[rgba(33,144,195,0)] p-4'>
+    <div className='flex sticky top-0 flex-col h-screen bg-gradient-to-b from-[rgba(33,144,195,0.1)] to-[rgba(33,144,195,0)] p-4'>
       {/* Logo Section */}
       <Link href={"/"}>
         <Image
@@ -72,12 +72,12 @@ const Menu = () => {
       </div>
 
       {/* Profile Section */}
-      <div className='flex items-center mt-4'>
+      <div className='flex justify-center items-center mt-4'>
         <Image
-          src='/path-to-avatar.jpg' // Replace with the actual path to your avatar image
+          src='/assets/profile-pic.png' // Replace with the actual path to your avatar image
           alt='Profile'
-          width={20}
-          height={20}
+          width={50}
+          height={50}
           className=' rounded-full mr-2'
         />
         <div className='max-sm:hidden block'>

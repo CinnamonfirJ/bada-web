@@ -67,6 +67,28 @@ const Navbar = () => {
           See a Demo
         </Button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isMobileMenuOpen && (
+        <div className='absolute top-full left-0 w-full bg-white shadow-md md:hidden'>
+          <ul className='flex flex-col gap-4 py-4 px-6 capitalize'>
+            {links.map((link, i) => (
+              <li
+                key={i}
+                className='border-b border-gray-300 pb-2 text-black hover:text-blue-600 transition-colors duration-200'
+              >
+                {link.name}
+              </li>
+            ))}
+          </ul>
+          <div className='flex flex-col gap-4 py-4 px-6'>
+            <Button to='/home'>Login</Button>
+            <Button to='/home' variant={"primary"}>
+              See a Demo
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

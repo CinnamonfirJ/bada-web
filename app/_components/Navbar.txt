@@ -1,0 +1,51 @@
+import {
+  ChevronDown,
+  BarChart2,
+  Grid,
+  Plus,
+  RefreshCcw,
+  Users,
+  Trash2,
+  Edit3,
+  FileText,
+  Mail,
+} from "lucide-react";
+
+const Navbar = () => {
+  return (
+    <nav className='bg-white text-sm border-b border-gray-200 h-12 px-4 flex items-center space-x-2 overflow-x-auto'>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        My open leads <ChevronDown className='h-4 w-4 ml-1' />
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <BarChart2 className='h-4 w-4 mr-1' /> Show chart
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <Grid className='h-4 w-4 mr-1' /> Focused view
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <Plus className='h-4 w-4 mr-1' /> New
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <RefreshCcw className='h-4 w-4 mr-1' /> Refresh
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <Users className='h-4 w-4 mr-1' /> Collaborate
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <Trash2 className='h-4 w-4 mr-1' /> Delete
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <Edit3 className='h-4 w-4 mr-1' /> Edit filters
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <FileText className='h-4 w-4 mr-1' /> Edit columns
+      </button>
+      <button className='text-content-text hover:bg-sidebar-hover px-3 py-1 rounded flex items-center whitespace-nowrap'>
+        <Mail className='h-4 w-4 mr-1' /> Smart data
+      </button>
+    </nav>
+  );
+};
+
+export default Navbar;

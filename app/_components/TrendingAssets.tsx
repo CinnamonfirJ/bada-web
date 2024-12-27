@@ -5,21 +5,25 @@ import Button from "./Button";
 export function TrendingAssets() {
   return (
     <div className='mb-8'>
-      <div className='flex items-center justify-between mb-4'>
+      {/* Header */}
+      <div className='flex flex-col md:flex-row items-center justify-between mb-4 gap-2'>
         <div className='flex items-center gap-2'>
-          <h2 className='font-semibold '>Trending Assets</h2>
-          <span>🔥</span>
+          <h2 className='font-semibold text-lg md:text-xl'>Trending Assets</h2>
+          <span className='text-lg'>🔥</span>
         </div>
         <a href='#' className='text-sm text-blue-400 hover:text-blue-300'>
           See more
         </a>
       </div>
 
-      <div className='bg-[#E2E2E2] p-6 border border-foreground rounded-2xl overflow-hidden'>
+      {/* Card */}
+      <div className='bg-[#E2E2E2] p-4 sm:p-6 border border-foreground rounded-2xl overflow-hidden'>
+        {/* Image */}
         <div className='relative'>
           <Image
-            src='/assets/trending-assets.png?height=300&width=400'
+            src='/assets/trending-assets.png'
             alt='SuiPlay0x1'
+            layout='responsive'
             width={400}
             height={300}
             className='w-full aspect-[4/3] object-cover bg-black rounded-2xl'
@@ -29,18 +33,23 @@ export function TrendingAssets() {
           </button>
         </div>
 
+        {/* Content */}
         <div className='p-4 space-y-4'>
-          <div className='flex items-start justify-between'>
+          {/* Title and Price */}
+          <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4'>
             <div>
-              <h3 className='font-semibold text-gray-900'>SuiPlay0x1</h3>
+              <h3 className='font-semibold text-gray-900 text-lg'>
+                SuiPlay0x1
+              </h3>
               <p className='text-sm text-gray-500'>Portable gaming device</p>
             </div>
             <div className='text-right'>
-              <p className='font-semibold text-gray-900'>$599.99</p>
+              <p className='font-semibold text-gray-900 text-lg'>$599.99</p>
               <p className='text-xs text-red-500'>Few stocks left</p>
             </div>
           </div>
 
+          {/* Description */}
           <p className='text-sm text-gray-600'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -48,11 +57,9 @@ export function TrendingAssets() {
             aliquip ex ea commodo consequat.
           </p>
 
-          <div className='flex justify-between'>
-            {/* <button className='flex-1 px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-900 hover:bg-gray-50'>
-              Add to cart
-            </button> */}
-            <Button variant='light'>
+          {/* Buttons */}
+          <div className='flex flex-col sm:flex-row gap-2'>
+            <Button variant='light' className='flex-1'>
               Add to cart{" "}
               <svg
                 width='18'
@@ -70,7 +77,7 @@ export function TrendingAssets() {
                 />
               </svg>
             </Button>
-            <Button variant='primary'>
+            <Button variant='primary' className='flex-1'>
               <span>
                 <svg
                   width='18'
@@ -95,7 +102,6 @@ export function TrendingAssets() {
                 </svg>
               </span>
               Make a bid
-              {/* <span className='ml-1'>→</span> */}
             </Button>
           </div>
         </div>

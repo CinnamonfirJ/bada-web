@@ -44,45 +44,45 @@ const SearchPage = () => {
   return (
     <div className='flex justify-between w-full max-[900px]:flex-col'>
       <main className='w-full'>
-        <div className='flex w-full justify-center mx-auto px-4'>
+        <div className='w-full mx-auto px-4'>
           <div className='py-4'>
             <SearchBar />
           </div>
-        </div>
 
-        {/* Tab Headers */}
-        <Filter
-          tabs={tabs}
-          onFilterChange={(value) => setFilter(value)} // Update filter when a tab is clicked
-        />
-
-        {/* Hero image */}
-        <div className='relative z-10 w-full max-w-[1200px] p-4'>
-          <Image
-            src='/assets/suiPlay0x1.png' // Place the image in your public folder
-            alt='SuiPlay 0X1'
-            layout='responsive'
-            width={1200}
-            height={500}
-            className='rounded-lg'
-            priority
+          {/* Tab Headers */}
+          <Filter
+            tabs={tabs}
+            onFilterChange={(value) => setFilter(value)} // Update filter when a tab is clicked
           />
-        </div>
 
-        <div>
-          {results.map((result, i) => (
-            <div
-              key={i}
-              className='flex justify-between items-center p-6 cursor-pointer'
-            >
-              <div>
-                <span className='text-sm'>Trending</span>
-                <p className='font-semibold'> {result.label} </p>
-                <span className='text-sm'> {result.value} posts</span>
+          {/* Hero image */}
+          <div className='relative z-10 w-full max-w-[1200px] p-4'>
+            <Image
+              src='/assets/suiPlay0x1.png' // Place the image in your public folder
+              alt='SuiPlay 0X1'
+              layout='responsive'
+              width={1200}
+              height={500}
+              className='rounded-lg'
+              priority
+            />
+          </div>
+
+          <div>
+            {results.map((result, i) => (
+              <div
+                key={i}
+                className='flex justify-between items-center p-6 cursor-pointer'
+              >
+                <div>
+                  <span className='text-sm'>Trending</span>
+                  <p className='font-semibold'> {result.label} </p>
+                  <span className='text-sm'> {result.value} posts</span>
+                </div>
+                <div>...</div>
               </div>
-              <div>...</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </main>
 

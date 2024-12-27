@@ -28,12 +28,12 @@ const BottomMenu = () => {
   return (
     <div className=' max-sm:flex hidden fixed bottom-0 inset-x-0 w-full justify-between bg-white p-4'>
       {/* Navigation Items */}
-      <div className='flex gap-4'>
+      <div className='flex justify-between w-full'>
         {navItems.map((link, i) => (
           <Link
             key={i}
             href={link.path}
-            className={`flex items-center gap-3 py-3 px-4 rounded-lg hover:bg-[#1A6E8F] transition ${
+            className={`flex items-center gap-3 py-3 px-4 max-sm:py-2 max-sm:px-3 rounded-lg hover:bg-[#1A6E8F] transition ${
               pathname === link.path ? "bg-[#1A6E8F]" : ""
             }`}
           >
@@ -51,10 +51,10 @@ const BottomMenu = () => {
         ))}
       </div>
 
-      <div className='flex items-center gap-4'>
+      <div className='flex max-sm:hidden items-center gap-4'>
         {/* Create Post Button */}
         <div>
-          <button className='flex items-center justify-center w-full py-3 bg-[#1A6E8F] text-white rounded-lg hover:bg-[#184E6B] transition'>
+          <button className='flex items-center justify-center w-full py-3 px-3 bg-[#1A6E8F] text-white rounded-lg hover:bg-[#184E6B] transition'>
             <PlusCircle size={20} className='text-black mr-2 max-sm:mr-0' />
           </button>
         </div>

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Reply, Heart, Bell, User } from "lucide-react";
 import Image from "next/image";
+import Aside from "@/app/_components/Aside";
 
 const NotificationsPage = () => {
   const [activeTab, setActiveTab] = useState("socials");
@@ -33,7 +34,7 @@ const NotificationsPage = () => {
       time: "2 mins ago",
       action: "Replied to your post",
       mention: "@suinetwork",
-      avatar: "/placeholder.svg",
+      avatar: "/assets/img1.png",
       postText:
         "That's rookie numbers. @suinetwork had way better numbers in their first month.",
     },
@@ -56,7 +57,7 @@ const NotificationsPage = () => {
       username: "@ikram_lukman",
       time: "12 mins ago",
       action: "Liked your post",
-      avatar: "/placeholder.svg",
+      avatar: "/assets/img5.png",
       postText: "I liked your post",
     },
     {
@@ -79,7 +80,7 @@ const NotificationsPage = () => {
       time: "17 mins ago",
       action: "Replied to your post",
       mention: "@FanTV",
-      avatar: "/placeholder.svg",
+      avatar: "/assets/img2.png",
       postText: "Wow, this is amazing! @FanTV",
     },
     {
@@ -105,7 +106,7 @@ const NotificationsPage = () => {
       username: "@mattgoodatsui",
       time: "52 mins ago",
       action: "Followed you",
-      avatar: "/placeholder.svg",
+      avatar: "/assets/img3.png",
       postText: "",
     },
     {
@@ -127,7 +128,7 @@ const NotificationsPage = () => {
       username: "@Lois_choj.",
       time: "59 mins ago",
       action: "Liked your post",
-      avatar: "/placeholder.svg",
+      avatar: "/assets/img6.png",
       postText: "I liked your post",
     },
     {
@@ -148,7 +149,7 @@ const NotificationsPage = () => {
       user: "ruru_arcade",
       action: "Started following you",
       time: "1 hr ago",
-      avatar: "/placeholder.svg",
+      avatar: "/assets/img2.png",
       postText: "",
     },
   ];
@@ -317,140 +318,146 @@ const NotificationsPage = () => {
   ];
 
   return (
-    <div className='w-full mx-auto'>
-      {/* Header */}
-      <h3 className='text-xl font-semibold p-5'>Notifications</h3>
+    <div className='flex justify-between w-full max-[900px]:flex-col'>
+      <main className='w-full mx-auto'>
+        {/* Header */}
+        <h3 className='text-xl font-semibold p-5'>Notifications</h3>
 
-      {/* Tabs */}
-      <div className='flex justify-between items-center gap-8 pb-8 px-4 border-b border-gray-300'>
-        {tabs.map((tab) => (
-          <div key={tab.value} className='relative mx-8 sm:mx-32'>
-            <button
-              onClick={() => setActiveTab(tab.value)}
-              className={`text-lg font-medium ${
-                activeTab === tab.value
-                  ? "text-black"
-                  : "text-ai-text hover:text-gray-900"
-              }`}
-            >
-              {tab.label}
-            </button>
-            {activeTab === tab.value && (
-              <div>
-                {/* Red dot at top-right edge of the text */}
-                <span className='absolute top-[-6px] -right-2 w-2 h-2 bg-red-500 rounded-full'></span>
-                <div className='absolute left-1/2 transform -translate-x-1/2 bottom-0 h-[2px] w-[10px] bg-black'></div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Socials Section */}
-      {activeTab === "socials" && (
-        <div className='space-y-6'>
-          {socials.map((social, index) => (
-            <div
-              key={index}
-              className='flex items-start gap-8 p-4 transition-colors duration-200 border-b border-gray-300'
-            >
-              {/* Icon */}
-              <div className='flex-shrink-0 text-[#1A4962] mr-6'>
-                {social.icon}
-              </div>
-
-              <div className='flex max-md:flex-col gap-4 items-start'>
-                {/* Avatar */}
-                <div className='flex-shrink-0'>
-                  <Image
-                    src={social.avatar}
-                    alt={social.user}
-                    width={48}
-                    height={48}
-                    className='rounded-full sm:w-36 sm:h-36 md:w-48 md:h-48'
-                  />
+        {/* Tabs */}
+        <div className='flex justify-between items-center gap-8 pb-8 px-4 border-b border-gray-300'>
+          {tabs.map((tab) => (
+            <div key={tab.value} className='relative mx-8 sm:mx-32'>
+              <button
+                onClick={() => setActiveTab(tab.value)}
+                className={`text-lg font-medium ${
+                  activeTab === tab.value
+                    ? "text-black"
+                    : "text-ai-text hover:text-gray-900"
+                }`}
+              >
+                {tab.label}
+              </button>
+              {activeTab === tab.value && (
+                <div>
+                  {/* Red dot at top-right edge of the text */}
+                  <span className='absolute top-[-6px] -right-2 w-2 h-2 bg-red-500 rounded-full'></span>
+                  <div className='absolute left-1/2 transform -translate-x-1/2 bottom-0 h-[2px] w-[10px] bg-black'></div>
                 </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Socials Section */}
+        {activeTab === "socials" && (
+          <div className='space-y-6'>
+            {socials.map((social, index) => (
+              <div
+                key={index}
+                className='flex items-start gap-8 p-4 transition-colors duration-200 border-b border-gray-300'
+              >
+                {/* Icon */}
+                <div className='flex-shrink-0 text-[#1A4962] mr-6'>
+                  {social.icon}
+                </div>
+
+                <div className='flex max-md:flex-col gap-4 items-start'>
+                  {/* Avatar */}
+                  <div className='flex-shrink-0'>
+                    <Image
+                      src={social.avatar}
+                      alt={social.user}
+                      width={36}
+                      height={36}
+                      // className='rounded-full max-md:w-36 max-md:h-36'
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className='flex-1'>
+                    <div className='flex max-md:hidden items-center gap-2 text-sm'>
+                      <span className='font-medium text-[#1A4962]'>
+                        {social.user}
+                      </span>
+                      <span className='text-[#1A4962] text-sm'>
+                        {social.time}
+                      </span>
+                    </div>
+                    <p className='text-[#1A4962] text-sm'>
+                      {social.action}{" "}
+                      {social.mention && (
+                        <span className='text-[#1A4962]'>{social.mention}</span>
+                      )}
+                    </p>
+                    {social.postText && (
+                      <p className='text-sm mt-2 rounded-lg text-gray-600'>
+                        {social.postText}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Marketplace Section */}
+        {activeTab === "marketplace" && (
+          <div className='space-y-6 p-4'>
+            {marketplace.map((item, index) => (
+              <div
+                key={index}
+                className='flex items-start gap-4 p-4 transition-colors duration-200 border-b border-gray-300'
+              >
+                {/* Icon */}
+                <div className='flex-shrink-0'>{item.icon}</div>
 
                 {/* Content */}
                 <div className='flex-1'>
-                  <div className='flex max-md:hidden items-center gap-2 text-sm'>
-                    <span className='font-medium text-[#1A4962]'>
-                      {social.user}
-                    </span>
-                    <span className='text-[#1A4962] text-sm'>
-                      {social.time}
-                    </span>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex max-sm:flex-col items-center gap-2'>
+                      {item.user && (
+                        <>
+                          <span className='font-medium text-[#1A4962]'>
+                            {item.user}
+                          </span>
+                          {item.username && (
+                            <span className='text-[#1A4962]'>
+                              {item.username}
+                            </span>
+                          )}
+                        </>
+                      )}
+                      <span className='text-[#1A4962] text-sm'>
+                        · {item.time}
+                      </span>
+                    </div>
                   </div>
-                  <p className='text-[#1A4962] text-sm'>
-                    {social.action}{" "}
-                    {social.mention && (
-                      <span className='text-[#1A4962]'>{social.mention}</span>
-                    )}
-                  </p>
-                  {social.postText && (
-                    <p className='text-sm mt-2 rounded-lg text-gray-600'>
-                      {social.postText}
-                    </p>
+                  <h4
+                    className={`font-medium mt-1 ${
+                      item.error ? "text-red-600" : "text-[#1A4962]"
+                    }`}
+                  >
+                    {item.title}
+                  </h4>
+                  {item.description && (
+                    <div className='flex justify-between  items-start max-md:flex-col'>
+                      <p className='text-sm text-gray-500 max-w-lg mt-1'>
+                        {item.description}
+                      </p>
+                      <button className='px-8 py-2 rounded-3xl text-sm text-nowrap font-medium bg-[#1A4962] text-white'>
+                        View Details
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </main>
 
-      {/* Marketplace Section */}
-      {activeTab === "marketplace" && (
-        <div className='space-y-6 p-4'>
-          {marketplace.map((item, index) => (
-            <div
-              key={index}
-              className='flex items-start gap-4 p-4 transition-colors duration-200 border-b border-gray-300'
-            >
-              {/* Icon */}
-              <div className='flex-shrink-0'>{item.icon}</div>
-
-              {/* Content */}
-              <div className='flex-1'>
-                <div className='flex items-center justify-between'>
-                  <div className='flex items-center gap-2'>
-                    {item.user && (
-                      <>
-                        <span className='font-medium text-[#1A4962]'>
-                          {item.user}
-                        </span>
-                        {item.username && (
-                          <span className='text-[#1A4962]'>
-                            {item.username}
-                          </span>
-                        )}
-                      </>
-                    )}
-                    <span className='text-[#1A4962] text-sm'>
-                      · {item.time}
-                    </span>
-                  </div>
-                  <button className='px-8 py-2 rounded-3xl text-sm font-medium bg-[#1A4962] text-white'>
-                    View Details
-                  </button>
-                </div>
-                <h4
-                  className={`font-medium mt-1 ${
-                    item.error ? "text-red-600" : "text-[#1A4962]"
-                  }`}
-                >
-                  {item.title}
-                </h4>
-                {item.description && (
-                  <p className='text-sm text-gray-500 mt-1'>
-                    {item.description}
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+      <Aside />
     </div>
   );
 };

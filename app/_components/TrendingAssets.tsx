@@ -59,7 +59,7 @@ export function TrendingAssets() {
 
           {/* Buttons */}
           <div className='flex flex-col sm:flex-row gap-2'>
-            <Button variant='light' className='flex-1'>
+            <Button variant='light'>
               Add to cart{" "}
               <svg
                 width='18'
@@ -77,7 +77,7 @@ export function TrendingAssets() {
                 />
               </svg>
             </Button>
-            <Button variant='primary' className='flex-1'>
+            <Button variant='primary'>
               <span>
                 <svg
                   width='18'

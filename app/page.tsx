@@ -1,5 +1,7 @@
 import Navbar from "./_components/Navbar";
 import Hero from "./_sections/Hero";
+import NewEra from "./_sections/NewEra ";
+import WhyUseBada from "./_sections/WhyUseBada";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       </div>
 
       <Hero />
+      <WhyUseBada />
+      <NewEra />
     </div>
   );
 }

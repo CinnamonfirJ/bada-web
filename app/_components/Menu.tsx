@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import {
   Home,
   User,
-  MessageSquare,
   Bell,
   Search,
   ShoppingBag,
@@ -16,7 +15,6 @@ import Image from "next/image";
 export const navItems = [
   { name: "Home", icon: Home, path: "/home" },
   { name: "Profile", icon: User, path: "/profile" },
-  { name: "Chat", icon: MessageSquare, path: "/chat" },
   { name: "Notifications", icon: Bell, path: "/notifications" },
   { name: "Search", icon: Search, path: "/search" },
   { name: "Marketplace", icon: ShoppingBag, path: "/marketplace" },

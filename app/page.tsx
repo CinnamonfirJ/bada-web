@@ -1,7 +1,11 @@
 import Navbar from "./_components/Navbar";
 import Partners from "./_components/Partners";
+import FAQ from "./_sections/FAQ";
+import Footer from "./_sections/Footer";
 import Hero from "./_sections/Hero";
 import NewEra from "./_sections/NewEra ";
+import Testimonials from "./_sections/Testimonials";
+import ToolsResources from "./_sections/ToolsResources";
 import WhyUseBada from "./_sections/WhyUseBada";
 
 export default function Home() {
@@ -18,6 +22,10 @@ export default function Home() {
       <Partners />
       <WhyUseBada />
       <NewEra />
+      <ToolsResources />
+      <Testimonials />
+      <FAQ />
+      <Footer />
     </div>
   );
 }

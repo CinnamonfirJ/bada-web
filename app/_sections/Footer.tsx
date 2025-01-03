@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className='bg-[#1B4B66] text-white'>
       <div className='container mx-auto px-4 py-12'>
-        <div className='flex justify-end gap-32'>
+        <div className='flex max-sm:flex-col justify-end gap-32 max-sm:gap-3'>
           <div>
             <h3 className='font-semibold text-lg mb-4'>About</h3>
             <ul className='space-y-2'>

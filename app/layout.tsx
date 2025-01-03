@@ -2,11 +2,10 @@ import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+const montserrat = {
+  link: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap",
+  variable: "--font-montserrat",
+};
 
 export const metadata: Metadata = {
   title: "Bada",
@@ -19,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={`${inter.variable} font-sans`}>
+    <html lang='en' className={`${montserrat.variable} font-sans`}>
       <body>{children}</body>
     </html>
   );
